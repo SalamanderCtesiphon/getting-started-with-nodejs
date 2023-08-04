@@ -1,5 +1,8 @@
-const pathname = '/a/b/c';
-const search = '?d=e';
-const hash = '#fgh';
-const myURL = new URL(`https://example.org${pathname}${search}${hash}`);
-console.log(myURL.href);
+var http = require('http');
+var dt = require('./myfirstmodule');
+
+http.createServer(function(req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write("The date and time are currently: " + dt.myDateTime());
+  res.end();
+}).listen(3000);
