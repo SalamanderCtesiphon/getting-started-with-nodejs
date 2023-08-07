@@ -7,3 +7,5 @@ http.createServer(function(req, res) {
   var txt = q.year + " " + q.month;
   res.end(txt);
 }).listen(8080);
+
+//this is how to add a querystring to an http request
